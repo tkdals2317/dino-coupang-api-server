@@ -19,7 +19,7 @@ class Product(
     @Column(columnDefinition = "TEXT")
     var description: String, // 에디터가 HTML로 상품 설명 저장
 
-    var price: Long,
+    var price: Int,
 
     var rating: Double,
 

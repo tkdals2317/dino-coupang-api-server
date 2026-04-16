@@ -31,7 +31,7 @@ class ProductDocument(
     var description: String,
 
     @Field(type = FieldType.Integer)
-    var price: Long,
+    var price: Int,
 
     @Field(type = FieldType.Double)
     var rating: Double,
