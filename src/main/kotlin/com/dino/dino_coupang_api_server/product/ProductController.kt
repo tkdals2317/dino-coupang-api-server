@@ -39,4 +39,10 @@ class ProductController(
         return ResponseEntity.noContent().build()
     }
 
+    @GetMapping("/suggestions")
+    fun getSuggestions(@RequestParam query: String): ResponseEntity<List<String>> {
+        val  suggestions = productService.getSuggestions(query)
+        return ResponseEntity.ok(suggestions)
+    }
+
 }

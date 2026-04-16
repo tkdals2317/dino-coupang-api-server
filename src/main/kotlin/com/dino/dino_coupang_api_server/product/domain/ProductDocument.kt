@@ -44,4 +44,8 @@ class ProductDocument(
     )
     var category: String
 ) {
+    @Override
+    override fun toString(): String {
+        return "ProductDocument(id='$id', name='$name', description='$description', price=$price, rating=$rating, category='$category')"
+    }
 }
