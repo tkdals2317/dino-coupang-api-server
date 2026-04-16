@@ -1,7 +1,7 @@
-package com.dino.dino_coupang_api_server
+package com.dino.dino_coupang_api_server.product
 
-import com.dino.dino_coupang_api_server.domain.Product
-import com.dino.dino_coupang_api_server.dto.CreateProductRequestDto
+import com.dino.dino_coupang_api_server.product.domain.Product
+import com.dino.dino_coupang_api_server.product.dto.CreateProductRequestDto
 import org.springframework.data.domain.PageRequest
 import org.springframework.stereotype.Service
 

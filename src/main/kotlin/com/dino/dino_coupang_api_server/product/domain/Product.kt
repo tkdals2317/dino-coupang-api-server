@@ -1,4 +1,4 @@
-package com.dino.dino_coupang_api_server.domain
+package com.dino.dino_coupang_api_server.product.domain
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity

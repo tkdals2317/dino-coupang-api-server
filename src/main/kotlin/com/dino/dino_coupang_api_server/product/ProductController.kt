@@ -1,7 +1,7 @@
-package com.dino.dino_coupang_api_server
+package com.dino.dino_coupang_api_server.product
 
-import com.dino.dino_coupang_api_server.domain.Product
-import com.dino.dino_coupang_api_server.dto.CreateProductRequestDto
+import com.dino.dino_coupang_api_server.product.domain.Product
+import com.dino.dino_coupang_api_server.product.dto.CreateProductRequestDto
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
