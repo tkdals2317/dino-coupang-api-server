@@ -1,6 +1,7 @@
 package com.dino.dino_coupang_api_server.product
 
 import com.dino.dino_coupang_api_server.product.domain.Product
+import com.dino.dino_coupang_api_server.product.domain.ProductDocument
 import com.dino.dino_coupang_api_server.product.dto.CreateProductRequestDto
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.DeleteMapping
@@ -43,6 +44,19 @@ class ProductController(
     fun getSuggestions(@RequestParam query: String): ResponseEntity<List<String>> {
         val  suggestions = productService.getSuggestions(query)
         return ResponseEntity.ok(suggestions)
+    }
+
+    @GetMapping("/search")
+    fun searchProducts(
+        @RequestParam query: String,
+        @RequestParam(required = false) category: String?,
+        @RequestParam(defaultValue = "0") minPrice: Double,
+        @RequestParam(defaultValue = "2147483647") maxPrice: Double,
+        @RequestParam(defaultValue = "1") page: Int,
+        @RequestParam(defaultValue = "5") size: Int): ResponseEntity<List<ProductDocument>> {
+
+        val products = productService.searchProducts(query, category, minPrice, maxPrice, page, size)
+        return ResponseEntity.ok(products)
     }
 
 }

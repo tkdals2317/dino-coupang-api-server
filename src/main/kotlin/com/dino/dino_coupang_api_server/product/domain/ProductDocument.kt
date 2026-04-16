@@ -10,7 +10,6 @@ import org.springframework.data.elasticsearch.annotations.Setting
 
 @Document(indexName = "products")
 @Setting(settingPath = "/elasticsearch/product-settings.json")
-
 class ProductDocument(
     @Id
     val id: String,
