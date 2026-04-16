@@ -22,7 +22,7 @@ class ProductController(
     fun getProducts(
         @RequestParam(defaultValue = "0") page: Int,
         @RequestParam(defaultValue = "10") size: Int
-    ) : ResponseEntity<List<Product>> {
+    ): ResponseEntity<List<Product>> {
         val products = productService.getProducts(page, size)
         return ResponseEntity.ok(products)
     }
@@ -38,6 +38,5 @@ class ProductController(
         productService.deleteProduct(id)
         return ResponseEntity.noContent().build()
     }
-
 
 }
